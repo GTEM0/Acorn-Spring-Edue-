@@ -17,7 +17,7 @@ public class NaverController2 {
     ApiExamSearchBlog2 api2;
 
 
-    @RequestMapping("/naver")
+    @RequestMapping("/naver3")
     public String naverAPI2(Model model) {
         String result = api2.getNaverAPI();
         ArrayList<ItemDTO> list = api2.fromJSONtoItems(result);
