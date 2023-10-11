@@ -17,7 +17,7 @@ public class 데이터응답 {
 	public String data1() {
 		return "data!!";
 	}
-
+//produces = "text/plain;charset=UTF-8"
 	/*자바객체 -> json 변환해줌, 라이브러리 pom.xml => jackson data-bind*/
 	@ResponseBody
 	@GetMapping("/data2")
