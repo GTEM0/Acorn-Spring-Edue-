@@ -21,7 +21,7 @@
                 <td>${item.title}</td>
                 <td><a href="${item.link}">${item.link}</a></td>
                 <td><img src="${item.image}" alt="Product Image" style="max-width: 100px; max-height: 100px;"></td>
-                <td>${item.lprice} KRW</td>
+                <td>${item.lprice}원</td>
             </tr>
         </c:forEach>
     </table>
