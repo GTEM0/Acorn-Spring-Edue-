@@ -21,7 +21,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.acorn.day5.cookie" />	
-	<context:component-scan base-package="com.acorn.day5.ex" />	
+	<context:component-scan base-package="com.acorn.day5디비연동" />
+		<context:component-scan base-package="com.acorn.api" />	
+
 	
 </beans:beans>
