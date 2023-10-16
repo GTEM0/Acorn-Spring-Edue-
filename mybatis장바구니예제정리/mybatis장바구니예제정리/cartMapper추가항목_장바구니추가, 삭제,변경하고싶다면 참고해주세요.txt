@@ -1,0 +1,33 @@
+<!--  장바구니 추가 기능할 때 기존에 카트에 있는지 확인하는 sql.. 장바구니 추가, 삭제 , 변경 기능 해 보고 싶은 분들을 위해   -->
+
+	<select id="selectCountInCart" resultType="String"
+		parameterType="CartDTO">
+	    <![CDATA[
+		    select decode(count(*), 0, 'false', 'true') from cart_tbl
+			where goodsNo =#{goodsNo}
+			and   memberId=#{memberId} 
+    	    ]]>
+	</select>
+	
+	<!--   장바구니 테이블에 추가 -->
+
+	<insert id="insert" parameterType="CartDTO">
+		INSERT INTO cart_tbl
+		(cartNO , memberId, goodsNo, cartQty)
+		VALUES
+		(#{cartNO}, #{memberId}, #{goodsNo} , #{cartQty})
+	</insert> 
+
+	<update id="update" parameterType="CartDTO">
+		UPDATE cart_tbl
+		SET cartQty= #{cartQty)
+		WHERE  cartNO = #{cartNO}
+	</update>
+
+	<delete id="cartDeleteAll">
+		DELETE FROM cart_tbl
+	</delete>
+
+	<delete id="cartDelete" parameterType="int">
+		DELETE FROM cart_tbl WHERE  cartNO = #{cartNO}
+	</delete>
