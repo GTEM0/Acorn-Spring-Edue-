@@ -20,19 +20,16 @@ public class RepositoryRealImp2 implements MemberRepositoryI {
 
 	@Override
 	public List<Member> selectAll() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public int update(Member member) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int delete(String userId) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 

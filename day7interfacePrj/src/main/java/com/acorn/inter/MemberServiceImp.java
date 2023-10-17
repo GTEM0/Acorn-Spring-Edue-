@@ -13,25 +13,21 @@ public class MemberServiceImp  implements MemberServiceI{
 
 	@Override
 	public int registerMember(Member member) {
-		// TODO Auto-generated method stub
 		return dao.insert(member);
 	}
 
 	@Override
 	public List<Member> getMemberList() {
-		// TODO Auto-generated method stub
 		return dao.selectAll();
 	}
 
 	@Override
 	public int modifyMember(Member member) {
-		// TODO Auto-generated method stub
 		return  dao.update(member);
 	}
 
 	@Override
 	public int deleteMember(String userId) {
-		// TODO Auto-generated method stub
 		return dao.delete(userId);
 	}
 
